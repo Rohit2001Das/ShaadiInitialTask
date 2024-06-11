@@ -160,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				6F4D61842C0E1DC5002D29A3 /* Onboarding */,
-				6F4D619B2C10E65B002D29A3 /* Login */,
+				6F4D619B2C10E65B002D29A3 /* Register */,
 				6F4D61A42C143728002D29A3 /* OTP */,
 			);
 			path = Screens;
@@ -194,7 +194,7 @@
 			path = UICommon;
 			sourceTree = "<group>";
 		};
-		6F4D619B2C10E65B002D29A3 /* Login */ = {
+		6F4D619B2C10E65B002D29A3 /* Register */ = {
 			isa = PBXGroup;
 			children = (
 				6F4D619C2C10E6AC002D29A3 /* RegisterView.swift */,
@@ -202,7 +202,7 @@
 				6F4D619E2C11B0E6002D29A3 /* RegisterViewController.swift */,
 				6F4D61A02C11C095002D29A3 /* PrivacyOptionCell.swift */,
 			);
-			path = Login;
+			path = Register;
 			sourceTree = "<group>";
 		};
 		6F4D61A42C143728002D29A3 /* OTP */ = {
