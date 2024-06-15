@@ -16,11 +16,10 @@ class RegisterView: UIView {
     let contactPrivacyLabel = UILabel()
     let privacyOptionsCollectionView: UICollectionView
     let nextButton = UIButton(type: .system)
-
     let showNameButton = UIButton(type: .system)
     let showNameLabel = UILabel()
     let showNameDescriptionLabel = UILabel()
-
+    
     override init(frame: CGRect) {
         let layout = WrappingFlowLayout()
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
@@ -30,7 +29,6 @@ class RegisterView: UIView {
         privacyOptionsCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
         super.init(frame: frame)
-        
         setupViews()
     }
     
@@ -41,55 +39,102 @@ class RegisterView: UIView {
     private func setupViews() {
         backgroundColor = .white
         
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        fullNameTextField.translatesAutoresizingMaskIntoConstraints = false
-        emailTextField.translatesAutoresizingMaskIntoConstraints = false
-        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
-        phoneNumberTextField.translatesAutoresizingMaskIntoConstraints = false
-        contactPrivacyLabel.translatesAutoresizingMaskIntoConstraints = false
-        privacyOptionsCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        showNameButton.translatesAutoresizingMaskIntoConstraints = false
-        showNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        showNameDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.translatesAutoresizingMaskIntoConstraints = false
+        configureTitleLabel()
+        configureTextFields()
+        configureShowNameButton()
+        configureContactPrivacyLabel()
+        configurePrivacyOptionsCollectionView()
+        configureNextButton()
+        
+        addSubviews()
 
+        setupConstraints()
+    }
+    
+    private func configureTitleLabel() {
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.text = "Let's get to know each other 👋"
         titleLabel.font = UIFont.boldSystemFont(ofSize: 24)
         titleLabel.textAlignment = .center
         titleLabel.textColor = .black
-        
+    }
+    
+    private func configureTextFields() {
         setupTextField(fullNameTextField, placeholder: "Enter Full Name")
         setupTextField(emailTextField, placeholder: "Enter Email")
-        setPasswordTextField(passwordTextField, placeholder: "Enter Password")
+        setupPasswordTextField(passwordTextField, placeholder: "Enter Password")
         setupTextField(phoneNumberTextField, placeholder: "+91   Phone Number")
-        
-        contactPrivacyLabel.text = "Contact Privacy Settings"
-        contactPrivacyLabel.font = UIFont.systemFont(ofSize: 16)
-        contactPrivacyLabel.textColor = .black
-        
-        privacyOptionsCollectionView.backgroundColor = .white
-        privacyOptionsCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "PrivacyOptionCell")
-        
+    }
+    
+    private func configureShowNameButton() {
+        showNameButton.translatesAutoresizingMaskIntoConstraints = false
         showNameButton.setImage(UIImage(named: "unchecked"), for: .normal)
         showNameButton.tintColor = UIColor(hex: "#EF4B4B")
         showNameButton.addTarget(self, action: #selector(toggleShowName), for: .touchUpInside)
         
+        showNameLabel.translatesAutoresizingMaskIntoConstraints = false
         showNameLabel.text = "Show my name to all"
         showNameLabel.font = UIFont.systemFont(ofSize: 14)
         showNameLabel.textColor = .black
         
+        showNameDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         showNameDescriptionLabel.text = "If you turn off, you won't be able to see the name of other members"
         showNameDescriptionLabel.font = UIFont.systemFont(ofSize: 12)
         showNameDescriptionLabel.textColor = .gray
         showNameDescriptionLabel.numberOfLines = 0
-        
+    }
+    
+    private func configureContactPrivacyLabel() {
+        contactPrivacyLabel.translatesAutoresizingMaskIntoConstraints = false
+        contactPrivacyLabel.text = "Contact Privacy Settings"
+        contactPrivacyLabel.font = UIFont.systemFont(ofSize: 16)
+        contactPrivacyLabel.textColor = .black
+    }
+    
+    private func configurePrivacyOptionsCollectionView() {
+        privacyOptionsCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        privacyOptionsCollectionView.backgroundColor = .white
+        privacyOptionsCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "PrivacyOptionCell")
+    }
+    
+    private func configureNextButton() {
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.setTitle("Next", for: .normal)
         nextButton.backgroundColor = UIColor(hex: "#EF4B4B")
         nextButton.setTitleColor(.white, for: .normal)
         nextButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         nextButton.layer.cornerRadius = 15
         nextButton.clipsToBounds = true
-
+    }
+    
+    private func setupTextField(_ textField: UITextField, placeholder: String) {
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.placeholder = placeholder
+        textField.borderStyle = .roundedRect
+        textField.setPlaceholder(color: UIColor(hex:"#000000"))
+        textField.backgroundColor = UIColor(hex: "#F4F4F4")
+        textField.textColor = .black
+    }
+    
+    private func setupPasswordTextField(_ textField: UITextField, placeholder: String) {
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.placeholder = placeholder
+        textField.borderStyle = .roundedRect
+        textField.setPlaceholder(color: UIColor(hex:"#000000"))
+        textField.backgroundColor = UIColor(hex: "#F4F4F4")
+        textField.textColor = .black
+        textField.isSecureTextEntry = true
+        
+        let showPasswordButton = UIButton(type: .system)
+        showPasswordButton.setTitle("Show", for: .normal)
+        showPasswordButton.setTitleColor(UIColor(hex: "#EF4B4B"), for: .normal)
+        showPasswordButton.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
+        
+        textField.rightView = showPasswordButton
+        textField.rightViewMode = .always
+    }
+    
+    private func addSubviews() {
         addSubview(titleLabel)
         addSubview(fullNameTextField)
         addSubview(emailTextField)
@@ -101,7 +146,9 @@ class RegisterView: UIView {
         addSubview(showNameLabel)
         addSubview(showNameDescriptionLabel)
         addSubview(nextButton)
-        
+    }
+    
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
@@ -153,32 +200,6 @@ class RegisterView: UIView {
             nextButton.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
-
-    private func setupTextField(_ textField: UITextField, placeholder: String) {
-        textField.placeholder = placeholder
-        textField.borderStyle = .roundedRect
-        textField.setPlaceholder(color: UIColor(hex:"#000000"))
-        textField.backgroundColor = UIColor(hex: "#F4F4F4")
-        textField.textColor = .black
-    }
-    private func setPasswordTextField(_ textField: UITextField, placeholder: String){
-        textField.placeholder = placeholder
-        textField.borderStyle = .roundedRect
-        textField.setPlaceholder(color: UIColor(hex:"#000000"))
-        textField.backgroundColor = UIColor(hex: "#F4F4F4")
-        textField.textColor = .black
-        textField.isSecureTextEntry = true
-        
-        let showPasswordButton = UIButton(type: .system)
-                showPasswordButton.setTitle("Show", for: .normal)
-                showPasswordButton.setTitleColor(UIColor(hex: "#EF4B4B"), for: .normal)
-                showPasswordButton.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
-                
-                textField.rightView = showPasswordButton
-                textField.rightViewMode = .always
-    }
-    
-
     
     @objc private func toggleShowName() {
         if showNameButton.image(for: .normal) == UIImage(named: "unchecked") {
@@ -189,9 +210,9 @@ class RegisterView: UIView {
     }
     
     @objc private func togglePasswordVisibility() {
-            passwordTextField.isSecureTextEntry.toggle()
-            if let showPasswordButton = passwordTextField.rightView as? UIButton {
-                showPasswordButton.setTitle(passwordTextField.isSecureTextEntry ? "Show" : "Hide", for: .normal)
+                passwordTextField.isSecureTextEntry.toggle()
+                if let showPasswordButton = passwordTextField.rightView as? UIButton {
+                    showPasswordButton.setTitle(passwordTextField.isSecureTextEntry ? "Show" : "Hide", for: .normal)
+                }
             }
-        }
 }

@@ -22,8 +22,7 @@ class OTPViewController: UIViewController, OTPDelegate {
         }
     }
     
-    func didChangeValidity(isValid: Bool) {
-       
+    func didChangeValidity(isValid: Bool) {       
         print("OTP is valid: \(isValid)")
     }
 }

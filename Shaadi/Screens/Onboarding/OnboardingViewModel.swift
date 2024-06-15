@@ -10,7 +10,9 @@ import Foundation
 class OnboardingViewModel {
     private var items: [OnboardingItem]
     private var currentIndex: Int = 0
+    
     var navigateToRegister: (() -> Void)?
+    var navigateToFirstLogin: (() -> Void)?
     
     
     var currentItem: OnboardingItem {
@@ -36,7 +38,9 @@ class OnboardingViewModel {
     }
     
     func handleLogin() {
-        // Logic for handling the "Already have an account? Login" action
         print("Login button action triggered in ViewModel")
+        
+        navigateToFirstLogin?()
+    
     }
 }

@@ -54,6 +54,13 @@ class OnboardingViewController: UIViewController {
             let registerViewController = RegisterViewController()
             self?.navigationController?.pushViewController(registerViewController, animated: true)
         }
+        viewModel.navigateToFirstLogin = { [weak self] in
+            let firstLoginViewController = FirstLoginScreenViewController()
+            self?.navigationController?.pushViewController(firstLoginViewController, animated: true)
+            
+        }
+        
+        
     }
     
     private func updateView() {
