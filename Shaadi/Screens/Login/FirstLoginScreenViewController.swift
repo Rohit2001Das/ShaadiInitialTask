@@ -8,7 +8,7 @@
 import UIKit
 
 class FirstLoginScreenViewController: UIViewController, FirstLoginScreenViewModelDelegate {
-    private let loginScreenView = FirstLoginScreenView()
+    private let loginScreenView = LoginScreenView()
     private let viewModel = FirstLoginScreenViewModel()
 
     override func loadView() {
@@ -20,10 +20,20 @@ class FirstLoginScreenViewController: UIViewController, FirstLoginScreenViewMode
         viewModel.delegate = self
         setupBindings()
         setupButtons()
+        
+        let firstLoginScreenItem = LoginScreenItem(
+                   title: "Welcome Back 👻",
+                   description: "Login to your Account",
+                   placeholder: " +91   Enter phone number",
+                   sendButtonText: "Send One Time Password",
+                   loginButtonText: "Login using Password"
+               )
+               
+               loginScreenView.configure(with: firstLoginScreenItem)
     }
 
     private func setupBindings() {
-        loginScreenView.phoneNumberTextField.addTarget(self, action: #selector(phoneNumberChanged(_:)), for: .editingChanged)
+        loginScreenView.textField.addTarget(self, action: #selector(phoneNumberChanged(_:)), for: .editingChanged)
     }
 
     private func setupButtons() {

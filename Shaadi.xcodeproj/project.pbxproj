@@ -35,9 +35,12 @@
 		6F4D61AC2C144060002D29A3 /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61AB2C144060002D29A3 /* OTPStackView.swift */; };
 		6F4D61AE2C1440B0002D29A3 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61AD2C1440B0002D29A3 /* OTPTextField.swift */; };
 		6F4D61B72C18582A002D29A3 /* FirstLoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61B62C18582A002D29A3 /* FirstLoginScreenViewController.swift */; };
-		6F4D61B92C185876002D29A3 /* FirstLoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61B82C185876002D29A3 /* FirstLoginScreenView.swift */; };
 		6F4D61BB2C1961DE002D29A3 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61BA2C1961DE002D29A3 /* RegisterViewModel.swift */; };
 		6F82D1FA2C19EA90009A8EF8 /* FirstLoginScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F82D1F92C19EA90009A8EF8 /* FirstLoginScreenViewModel.swift */; };
+		6F82D1FC2C1DEA42009A8EF8 /* LoginScreenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F82D1FB2C1DEA42009A8EF8 /* LoginScreenItem.swift */; };
+		6F82D2002C1DF0DD009A8EF8 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F82D1FF2C1DF0DD009A8EF8 /* LoginScreenView.swift */; };
+		6F82D2062C218F3F009A8EF8 /* SecondLoginScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F82D2052C218F3F009A8EF8 /* SecondLoginScreenViewModel.swift */; };
+		6F82D2082C219088009A8EF8 /* SecondLoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F82D2072C219088009A8EF8 /* SecondLoginScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,9 +87,12 @@
 		6F4D61AB2C144060002D29A3 /* OTPStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPStackView.swift; sourceTree = "<group>"; };
 		6F4D61AD2C1440B0002D29A3 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		6F4D61B62C18582A002D29A3 /* FirstLoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLoginScreenViewController.swift; sourceTree = "<group>"; };
-		6F4D61B82C185876002D29A3 /* FirstLoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLoginScreenView.swift; sourceTree = "<group>"; };
 		6F4D61BA2C1961DE002D29A3 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		6F82D1F92C19EA90009A8EF8 /* FirstLoginScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLoginScreenViewModel.swift; sourceTree = "<group>"; };
+		6F82D1FB2C1DEA42009A8EF8 /* LoginScreenItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenItem.swift; sourceTree = "<group>"; };
+		6F82D1FF2C1DF0DD009A8EF8 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
+		6F82D2052C218F3F009A8EF8 /* SecondLoginScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondLoginScreenViewModel.swift; sourceTree = "<group>"; };
+		6F82D2072C219088009A8EF8 /* SecondLoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondLoginScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,9 +236,12 @@
 		6F4D61B52C1856FE002D29A3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				6F4D61B82C185876002D29A3 /* FirstLoginScreenView.swift */,
+				6F82D1FB2C1DEA42009A8EF8 /* LoginScreenItem.swift */,
+				6F82D1FF2C1DF0DD009A8EF8 /* LoginScreenView.swift */,
 				6F4D61B62C18582A002D29A3 /* FirstLoginScreenViewController.swift */,
 				6F82D1F92C19EA90009A8EF8 /* FirstLoginScreenViewModel.swift */,
+				6F82D2052C218F3F009A8EF8 /* SecondLoginScreenViewModel.swift */,
+				6F82D2072C219088009A8EF8 /* SecondLoginScreenViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -368,8 +377,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F4D619F2C11B0E7002D29A3 /* RegisterViewController.swift in Sources */,
-				6F4D61B92C185876002D29A3 /* FirstLoginScreenView.swift in Sources */,
+				6F82D2062C218F3F009A8EF8 /* SecondLoginScreenViewModel.swift in Sources */,
 				6F4D61B72C18582A002D29A3 /* FirstLoginScreenViewController.swift in Sources */,
+				6F82D1FC2C1DEA42009A8EF8 /* LoginScreenItem.swift in Sources */,
 				6F4D61872C0E1EE3002D29A3 /* OnboardingModel.swift in Sources */,
 				6F4D61A82C143787002D29A3 /* OTPViewController.swift in Sources */,
 				6F4D61A62C143761002D29A3 /* OTPView.swift in Sources */,
@@ -377,6 +387,7 @@
 				6F4D61532C0E1CDA002D29A3 /* AppDelegate.swift in Sources */,
 				6F4D61BB2C1961DE002D29A3 /* RegisterViewModel.swift in Sources */,
 				6F4D61AA2C1437A9002D29A3 /* OTPViewModel.swift in Sources */,
+				6F82D2082C219088009A8EF8 /* SecondLoginScreenViewController.swift in Sources */,
 				6F4D61992C107E72002D29A3 /* UIExtension.swift in Sources */,
 				6F4D619D2C10E6AC002D29A3 /* RegisterView.swift in Sources */,
 				6F4D61AE2C1440B0002D29A3 /* OTPTextField.swift in Sources */,
@@ -387,6 +398,7 @@
 				6F4D61552C0E1CDA002D29A3 /* SceneDelegate.swift in Sources */,
 				6F4D61A32C11FC6B002D29A3 /* WrappingFlowLayout.swift in Sources */,
 				6F82D1FA2C19EA90009A8EF8 /* FirstLoginScreenViewModel.swift in Sources */,
+				6F82D2002C1DF0DD009A8EF8 /* LoginScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,15 +30,20 @@ class PrivacyOptionCell: UICollectionViewCell {
         button.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(button)
         
+        
         NSLayoutConstraint.activate([
             button.topAnchor.constraint(equalTo: contentView.topAnchor),
             button.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: -20),
         ])
+        
+        
     }
 
     func configure(with title: String) {
         button.setTitle(title, for: .normal)
         button.sizeToFit()
     }
+    
+
 }

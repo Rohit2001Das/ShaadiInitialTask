@@ -31,6 +31,7 @@ class RegisterViewController: UIViewController, RegisterViewModelDelegate {
     
     private func setupNextButton() {
         registerView.nextButton.addTarget(self, action: #selector(navigateToOTPScreen), for: .touchUpInside)
+        updateNextButtonState(isEnabled: false)
     }
 
     @objc private func navigateToOTPScreen() {
@@ -66,11 +67,17 @@ class RegisterViewController: UIViewController, RegisterViewModelDelegate {
         registerView.privacyOptionsCollectionView.delegate = self
         registerView.privacyOptionsCollectionView.register(PrivacyOptionCell.self, forCellWithReuseIdentifier: "PrivacyOptionCell")
     }
+    
+    private func updateNextButtonState(isEnabled: Bool) {
+           registerView.nextButton.isEnabled = isEnabled
+           registerView.nextButton.alpha = isEnabled ? 1.0 : 0.5
+       }
+      
     // MARK: - RegisterViewModelDelegate
       
       func didUpdateData() {
           // Update the view based on the ViewModel's state
-          registerView.nextButton.isEnabled = viewModel.isFormValid
+          updateNextButtonState(isEnabled: viewModel.isFormValid)
           
           // Update the show name button state
           let showNameImage = viewModel.isNameVisible ? UIImage(named: "checked") : UIImage(named: "unchecked")
@@ -101,6 +108,7 @@ extension RegisterViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-          viewModel.selectedPrivacyOption = privacyOptions[indexPath.item]
-      }
+            viewModel.selectedPrivacyOption = privacyOptions[indexPath.item]
+        }
+        
 }

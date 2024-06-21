@@ -1,18 +1,18 @@
 //
-//  FirstLoginScreenView.swift
+//  LoginScreenView.swift
 //  Shaadi
 //
-//  Created by ROHIT DAS on 11/06/24.
+//  Created by ROHIT DAS on 15/06/24.
 //
 
 import UIKit
 
-class FirstLoginScreenView: UIView {
+class LoginScreenView: UIView {
     
     private let titleLabel = UILabel()
     private let loginLabel = UILabel()
     private let descriptionLabel = UILabel()
-    let phoneNumberTextField = UITextField()
+    let textField = UITextField()
     let sendButton = UIButton(type: .system)
     let loginUsingPasswordButton = UIButton(type: .system)
     
@@ -31,31 +31,27 @@ class FirstLoginScreenView: UIView {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         loginLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        phoneNumberTextField.translatesAutoresizingMaskIntoConstraints = false
+        textField.translatesAutoresizingMaskIntoConstraints = false
         sendButton.translatesAutoresizingMaskIntoConstraints = false
         loginUsingPasswordButton.translatesAutoresizingMaskIntoConstraints = false
         
-        titleLabel.text = "Welcome Back 👻"
         titleLabel.font = UIFont.boldSystemFont(ofSize: 24)
         titleLabel.textColor = .black
-        setupTextField(phoneNumberTextField, placeholder: "Enter phone number")
         
-        loginLabel.text = "Login to your Account"
         loginLabel.font = UIFont.systemFont(ofSize: 22)
         loginLabel.textColor = .black
         
-        descriptionLabel.text = "+91 Enter Phone Number"
         descriptionLabel.font = UIFont.systemFont(ofSize: 12)
         descriptionLabel.textColor = .black
         
-        sendButton.setTitle("Send One Time Password", for: .normal)
+        setupTextField(textField, placeholder: "")
+        
         sendButton.backgroundColor = UIColor(hex: "#EF4B4B")
         sendButton.setTitleColor(.white, for: .normal)
         sendButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         sendButton.layer.cornerRadius = 15
         sendButton.clipsToBounds = true
         
-        loginUsingPasswordButton.setTitle("Login using Password", for: .normal)
         loginUsingPasswordButton.backgroundColor = UIColor(hex:"#F4F4F4")
         loginUsingPasswordButton.setTitleColor(UIColor(hex: "#EF4B4B"), for: .normal)
         loginUsingPasswordButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
@@ -65,7 +61,7 @@ class FirstLoginScreenView: UIView {
         addSubview(titleLabel)
         addSubview(loginLabel)
         addSubview(descriptionLabel)
-        addSubview(phoneNumberTextField)
+        addSubview(textField)
         addSubview(sendButton)
         addSubview(loginUsingPasswordButton)
         
@@ -78,12 +74,13 @@ class FirstLoginScreenView: UIView {
             loginLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
             loginLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
             
-            phoneNumberTextField.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 25),
-            phoneNumberTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
-            phoneNumberTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
-            phoneNumberTextField.heightAnchor.constraint(equalToConstant: 50),
             
-            sendButton.topAnchor.constraint(equalTo: phoneNumberTextField.bottomAnchor, constant: 40	),
+            textField.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 25),
+            textField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
+            textField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
+            textField.heightAnchor.constraint(equalToConstant: 50),
+            
+            sendButton.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 40    ),
             sendButton.heightAnchor.constraint(equalToConstant: 60),
             sendButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             sendButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
@@ -94,6 +91,15 @@ class FirstLoginScreenView: UIView {
             loginUsingPasswordButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
         ])
     }
+    
+    func configure(with item: LoginScreenItem){
+        titleLabel.text = item.title
+        loginLabel.text = item.description
+        setupTextField(textField, placeholder: item.placeholder)
+        sendButton.setTitle(item.sendButtonText, for: .normal)
+        loginUsingPasswordButton.setTitle(item.loginButtonText, for: .normal)
+    }
+
     
     private func setupTextField(_ textField: UITextField, placeholder: String){
         textField.placeholder = placeholder
