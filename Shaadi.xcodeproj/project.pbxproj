@@ -11,19 +11,13 @@
 		6F4D61552C0E1CDA002D29A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61542C0E1CDA002D29A3 /* SceneDelegate.swift */; };
 		6F4D615C2C0E1CDC002D29A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F4D615B2C0E1CDC002D29A3 /* Assets.xcassets */; };
 		6F4D615F2C0E1CDC002D29A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F4D615D2C0E1CDC002D29A3 /* LaunchScreen.storyboard */; };
-		6F4D616A2C0E1CDD002D29A3 /* ShaadiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61692C0E1CDD002D29A3 /* ShaadiTests.swift */; };
-		6F4D61742C0E1CDD002D29A3 /* ShaadiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61732C0E1CDD002D29A3 /* ShaadiUITests.swift */; };
-		6F4D61762C0E1CDD002D29A3 /* ShaadiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61752C0E1CDD002D29A3 /* ShaadiUITestsLaunchTests.swift */; };
-		6F4D61872C0E1EE3002D29A3 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61862C0E1EE3002D29A3 /* OnboardingModel.swift */; };
+		6F4D61872C0E1EE3002D29A3 /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61862C0E1EE3002D29A3 /* OnboardingItem.swift */; };
 		6F4D61892C0E479E002D29A3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61882C0E479E002D29A3 /* OnboardingView.swift */; };
 		6F4D618A2C0E479E002D29A3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61882C0E479E002D29A3 /* OnboardingView.swift */; };
-		6F4D618B2C0E479E002D29A3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61882C0E479E002D29A3 /* OnboardingView.swift */; };
 		6F4D618D2C0F31C7002D29A3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D618C2C0F31C7002D29A3 /* OnboardingViewModel.swift */; };
 		6F4D618E2C0F31C7002D29A3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D618C2C0F31C7002D29A3 /* OnboardingViewModel.swift */; };
-		6F4D618F2C0F31C7002D29A3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D618C2C0F31C7002D29A3 /* OnboardingViewModel.swift */; };
 		6F4D61912C0F401E002D29A3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61902C0F401E002D29A3 /* OnboardingViewController.swift */; };
 		6F4D61922C0F401E002D29A3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61902C0F401E002D29A3 /* OnboardingViewController.swift */; };
-		6F4D61932C0F401E002D29A3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61902C0F401E002D29A3 /* OnboardingViewController.swift */; };
 		6F4D61992C107E72002D29A3 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D61982C107E72002D29A3 /* UIExtension.swift */; };
 		6F4D619D2C10E6AC002D29A3 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D619C2C10E6AC002D29A3 /* RegisterView.swift */; };
 		6F4D619F2C11B0E7002D29A3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D619E2C11B0E6002D29A3 /* RegisterViewController.swift */; };
@@ -51,13 +45,6 @@
 			remoteGlobalIDString = 6F4D614E2C0E1CDA002D29A3;
 			remoteInfo = Shaadi;
 		};
-		6F4D61702C0E1CDD002D29A3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6F4D61472C0E1CDA002D29A3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6F4D614E2C0E1CDA002D29A3;
-			remoteInfo = Shaadi;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -68,11 +55,9 @@
 		6F4D615E2C0E1CDC002D29A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F4D61602C0E1CDC002D29A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F4D61652C0E1CDD002D29A3 /* ShaadiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShaadiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F4D61692C0E1CDD002D29A3 /* ShaadiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaadiTests.swift; sourceTree = "<group>"; };
-		6F4D616F2C0E1CDD002D29A3 /* ShaadiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShaadiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F4D61732C0E1CDD002D29A3 /* ShaadiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaadiUITests.swift; sourceTree = "<group>"; };
 		6F4D61752C0E1CDD002D29A3 /* ShaadiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaadiUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		6F4D61862C0E1EE3002D29A3 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		6F4D61862C0E1EE3002D29A3 /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
 		6F4D61882C0E479E002D29A3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		6F4D618C2C0F31C7002D29A3 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		6F4D61902C0F401E002D29A3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -110,13 +95,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F4D616C2C0E1CDD002D29A3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -135,7 +113,6 @@
 			children = (
 				6F4D614F2C0E1CDA002D29A3 /* Shaadi.app */,
 				6F4D61652C0E1CDD002D29A3 /* ShaadiTests.xctest */,
-				6F4D616F2C0E1CDD002D29A3 /* ShaadiUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,7 +133,6 @@
 		6F4D61682C0E1CDD002D29A3 /* ShaadiTests */ = {
 			isa = PBXGroup;
 			children = (
-				6F4D61692C0E1CDD002D29A3 /* ShaadiTests.swift */,
 			);
 			path = ShaadiTests;
 			sourceTree = "<group>";
@@ -193,7 +169,7 @@
 		6F4D61842C0E1DC5002D29A3 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				6F4D61862C0E1EE3002D29A3 /* OnboardingModel.swift */,
+				6F4D61862C0E1EE3002D29A3 /* OnboardingItem.swift */,
 				6F4D61882C0E479E002D29A3 /* OnboardingView.swift */,
 				6F4D618C2C0F31C7002D29A3 /* OnboardingViewModel.swift */,
 				6F4D61902C0F401E002D29A3 /* OnboardingViewController.swift */,
@@ -284,24 +260,6 @@
 			productReference = 6F4D61652C0E1CDD002D29A3 /* ShaadiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6F4D616E2C0E1CDD002D29A3 /* ShaadiUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6F4D617F2C0E1CDD002D29A3 /* Build configuration list for PBXNativeTarget "ShaadiUITests" */;
-			buildPhases = (
-				6F4D616B2C0E1CDD002D29A3 /* Sources */,
-				6F4D616C2C0E1CDD002D29A3 /* Frameworks */,
-				6F4D616D2C0E1CDD002D29A3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6F4D61712C0E1CDD002D29A3 /* PBXTargetDependency */,
-			);
-			name = ShaadiUITests;
-			productName = ShaadiUITests;
-			productReference = 6F4D616F2C0E1CDD002D29A3 /* ShaadiUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -316,10 +274,6 @@
 						CreatedOnToolsVersion = 15.0;
 					};
 					6F4D61642C0E1CDD002D29A3 = {
-						CreatedOnToolsVersion = 15.0;
-						TestTargetID = 6F4D614E2C0E1CDA002D29A3;
-					};
-					6F4D616E2C0E1CDD002D29A3 = {
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = 6F4D614E2C0E1CDA002D29A3;
 					};
@@ -340,7 +294,6 @@
 			targets = (
 				6F4D614E2C0E1CDA002D29A3 /* Shaadi */,
 				6F4D61642C0E1CDD002D29A3 /* ShaadiTests */,
-				6F4D616E2C0E1CDD002D29A3 /* ShaadiUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -362,13 +315,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F4D616D2C0E1CDD002D29A3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -380,7 +326,7 @@
 				6F82D2062C218F3F009A8EF8 /* SecondLoginScreenViewModel.swift in Sources */,
 				6F4D61B72C18582A002D29A3 /* FirstLoginScreenViewController.swift in Sources */,
 				6F82D1FC2C1DEA42009A8EF8 /* LoginScreenItem.swift in Sources */,
-				6F4D61872C0E1EE3002D29A3 /* OnboardingModel.swift in Sources */,
+				6F4D61872C0E1EE3002D29A3 /* OnboardingItem.swift in Sources */,
 				6F4D61A82C143787002D29A3 /* OTPViewController.swift in Sources */,
 				6F4D61A62C143761002D29A3 /* OTPView.swift in Sources */,
 				6F4D618D2C0F31C7002D29A3 /* OnboardingViewModel.swift in Sources */,
@@ -406,22 +352,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F4D616A2C0E1CDD002D29A3 /* ShaadiTests.swift in Sources */,
 				6F4D618E2C0F31C7002D29A3 /* OnboardingViewModel.swift in Sources */,
 				6F4D618A2C0E479E002D29A3 /* OnboardingView.swift in Sources */,
 				6F4D61922C0F401E002D29A3 /* OnboardingViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6F4D616B2C0E1CDD002D29A3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6F4D618B2C0E479E002D29A3 /* OnboardingView.swift in Sources */,
-				6F4D61762C0E1CDD002D29A3 /* ShaadiUITestsLaunchTests.swift in Sources */,
-				6F4D61932C0F401E002D29A3 /* OnboardingViewController.swift in Sources */,
-				6F4D61742C0E1CDD002D29A3 /* ShaadiUITests.swift in Sources */,
-				6F4D618F2C0F31C7002D29A3 /* OnboardingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,11 +365,6 @@
 			isa = PBXTargetDependency;
 			target = 6F4D614E2C0E1CDA002D29A3 /* Shaadi */;
 			targetProxy = 6F4D61662C0E1CDD002D29A3 /* PBXContainerItemProxy */;
-		};
-		6F4D61712C0E1CDD002D29A3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6F4D614E2C0E1CDA002D29A3 /* Shaadi */;
-			targetProxy = 6F4D61702C0E1CDD002D29A3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -665,42 +593,6 @@
 			};
 			name = Release;
 		};
-		6F4D61802C0E1CDD002D29A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L765ZY934H;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rohit.ShaadiUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Shaadi;
-			};
-			name = Debug;
-		};
-		6F4D61812C0E1CDD002D29A3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L765ZY934H;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rohit.ShaadiUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Shaadi;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -727,15 +619,6 @@
 			buildConfigurations = (
 				6F4D617D2C0E1CDD002D29A3 /* Debug */,
 				6F4D617E2C0E1CDD002D29A3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6F4D617F2C0E1CDD002D29A3 /* Build configuration list for PBXNativeTarget "ShaadiUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6F4D61802C0E1CDD002D29A3 /* Debug */,
-				6F4D61812C0E1CDD002D29A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
